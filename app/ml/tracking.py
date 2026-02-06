@@ -167,14 +167,14 @@ class BotSortTracker:
         # Initialize Activity Predictor
         from app.ml.activity_recognition import ActivityPredictor
         self.activity_predictor = ActivityPredictor(
-            model_path='/app/best_activity_model.pth', # Path in Docker container
+            model_path='/kaggle/working/runpod_for_camintel/app/best_activity_model.pth', # Path in Docker container
             device=self.device
         )
         
         # Initialize Accident Predictor
         from app.ml.accident_detector import AccidentPredictor
         self.accident_predictor = AccidentPredictor(
-            model_path='/app/best_accident_model.pth',
+            model_path='/kaggle/working/runpod_for_camintel/app/best_accident_model.pth',
             device=self.device
         )
         
