@@ -134,7 +134,7 @@ class KeypointSmoother:
 # ============================================================================
 class BotSortTracker:
     def __init__(self):
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
         self.half = self.device == 'cuda'
         
         # Load YOLO model
